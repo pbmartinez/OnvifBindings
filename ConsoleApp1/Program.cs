@@ -10,18 +10,33 @@ namespace ConsoleApp1
         static async Task Main(string[] args)
         {
             Console.WriteLine("Hello, World!");
-            var wsBinding = new WSHttpBinding()
+            //var wsBinding = new WSHttpBinding()
+            //{
+            //    Security = new WSHttpSecurity()
+            //    {
+            //        Message = new()
+            //        {
+            //            ClientCredentialType = MessageCredentialType.UserName 
+            //        },
+            //        Mode = SecurityMode.
+            //    },
+                
+                
+            //};
+            var wsBinding = new BasicHttpBinding()
             {
-                Security = new WSHttpSecurity()
+                Security = new BasicHttpSecurity()
                 {
                     Message = new()
                     {
-                        ClientCredentialType = MessageCredentialType.UserName 
+                        ClientCredentialType = BasicHttpMessageCredentialType.UserName 
                     },
-                    Mode = SecurityMode.None
-                },
-                
-                
+                    Mode = BasicHttpSecurityMode.TransportCredentialOnly,
+                    Transport = new HttpTransportSecurity()
+                    {
+                        ClientCredentialType = HttpClientCredentialType.Digest
+                    }
+                },                
             };
             var myEndpoint = new EndpointAddress("http://sdkgcore.geutebrueck.com:6203/onvif/device_service");
             
@@ -35,11 +50,8 @@ namespace ConsoleApp1
             myChannelFactory.Endpoint.EndpointBehaviors.Remove(defaultCredentials); //remove default ones
             myChannelFactory.Endpoint.EndpointBehaviors.Add(loginCredentials); //add required ones
 
-            // Create a channel
-            Device client = myChannelFactory.CreateChannel();
-            
+            Device client = myChannelFactory.CreateChannel();            
             var response = await client.GetDeviceInformationAsync(new GetDeviceInformationRequest());
-            Console.WriteLine("asd");
             Console.Read();
         }
     }
