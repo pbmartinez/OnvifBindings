@@ -1,0 +1,30 @@
+{
+  "ExtendedData": {
+    "inputs": [
+      "../../../w3/xmlmime.xsd",
+      "../../../w3/ws-addr.xsd",
+      "../../../w3/soap-envelope.xsd",
+      "../../../w3/xop-include.xsd",
+      "../../../oasis/b-2.xsd",
+      "../../../oasis/bf-2.xsd",
+      "../../../oasis/r-2.xsd",
+      "../../../oasis/t-1.xsd",
+      "../../../oasis/rw-2.wsdl",
+      "../../../oasis/bw-2.wsdl",
+      "../../../onvif_specs/onvif.xsd",
+      "../../../onvif_specs/common.xsd",
+      "../../../onvif_specs/types.xsd",
+      "../../../onvif_specs/wsdl/ver10/device/wsdl/devicemgmt.wsdl",
+      "../../../onvif_specs/wsdl/ver10/events/wsdl/event.wsdl"
+    ],
+    "collectionTypes": [
+      "System.Array",
+      "System.Collections.Generic.Dictionary`2"
+    ],
+    "namespaceMappings": [
+      "*, ServiceReference1"
+    ],
+    "targetFramework": "net6.0",
+    "typeReuseMode": "All"
+  }
+}

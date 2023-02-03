@@ -1,0 +1,26 @@
+{
+  "ExtendedData": {
+    "inputs": [
+      "../../../w3/*.xsd",
+      "../../../oasis/*.xsd",
+      "../../../oasis/*.wsdl",
+      "../../../onvif_specs/onvif.xsd",
+      "../../../onvif_specs/common.xsd",
+      "../../../onvif_specs/types.xsd",
+      "../../../onvif_specs/wsdl/ver10/device/wsdl/devicemgmt.wsdl",
+      "../../../onvif_specs/wsdl/ver10/events/wsdl/event.wsdl",
+      "../../../onvif_specs/wsdl/ver10/credential/wsdl/credential.wsdl",
+      "../../../onvif_specs/wsdl/ver10/authenticationbehavior/wsdl/authenticationbehavior.wsdl",
+      "../../../onvif_specs/wsdl/ver10/advancedsecurity/wsdl/*.wsdl"
+    ],
+    "collectionTypes": [
+      "System.Array",
+      "System.Collections.Generic.Dictionary`2"
+    ],
+    "namespaceMappings": [
+      "*, ServiceReference1"
+    ],
+    "targetFramework": "net6.0",
+    "typeReuseMode": "All"
+  }
+}
