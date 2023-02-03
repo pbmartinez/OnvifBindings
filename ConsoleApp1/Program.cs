@@ -55,7 +55,9 @@ namespace ConsoleApp1
         static async Task Main(string[] args)
         {
             Console.WriteLine("Hello, World!");
-            await doit();
+            await doit(uri:"http://sdkgcore.geutebrueck.com:6201/onvif/device_service");
+            await doit(uri:"http://sdkgcore.geutebrueck.com:6202/onvif/device_service");
+            await doit(uri:"http://sdkgcore.geutebrueck.com:6203/onvif/device_service");
         }
     }
 }
